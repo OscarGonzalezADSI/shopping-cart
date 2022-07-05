@@ -12,7 +12,7 @@ function service_carrito_calcular(nodes)
   return resToString;
 }
 
-function service_total(contenido)
-{
-  console.log(data[data.length-1].total);
-}
+
+
+
+
