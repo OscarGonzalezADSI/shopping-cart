@@ -1,0 +1,21 @@
+div.w3-card-4 form.w3-container fieldset.w3-round img{
+	width:100%;
+}
+
+div.w3-modal div.w3-modal-content div.w3-container i{
+	margin-top:15px;
+}
+
+div.w3-container div.w3-center{
+	margin:10px; 
+	border:0px;
+}
+
+button.w3-btn
+i{
+	font-size:34px;
+}
+
+fieldset.control{
+	border:0px;
+}
