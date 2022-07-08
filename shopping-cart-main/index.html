@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/main.css">
+<body>
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" >
+    <div class="w3-container w3-white">
+      <i onclick="moduleNone()" class="fa fa-remove w3-right w3-button w3-transparent w3-xlarge w3-lime w3-round-large" ></i>
+      <h2 class="w3-wide">¡A Comprar!</h2>
+      <p>Elige ser feliz:</p>
+      <div class="w3-card-4">
+        <div class="w3-container w3-lime w3-center">
+          <h2>Producto</h2>
+        </div>
+        <form class="w3-container" >
+          <fieldset class="w3-round-large">
+            <legend>
+              <label class="w3-text-black">
+                <b>Datos del producto:</b>
+              </label>
+            </legend>
+            <fieldset class="w3-round">
+              <legend>
+                <label class="w3-text-black">
+                  <b>Imagen:</b>
+                </label>
+              </legend>
+              <img src="https://www.w3schools.com/w3css/img_lights.jpg" class="w3-round" alt="Norway">
+            </fieldset>
+            <fieldset class="w3-round">
+              <legend>
+                <label class="w3-text-black" for="producto">
+                  <b>Nombre:</b>
+                </label>
+              </legend>
+            <input class="w3-input w3-border w3-lime" id="producto" type="text" />
+            </fieldset>
+            <fieldset class="w3-round">
+              <legend>
+                <label class="w3-text-black" for="precio">
+                  <b>Precio:</b>
+                </label>
+              </legend>
+              <input class="w3-input w3-border w3-lime" id="precio" type="number" />
+            </fieldset>
+            <fieldset class="w3-round">
+              <legend>
+                <label class="w3-text-black" for="cantidad">
+                  <b>Cantidad:</b>
+                </label>
+              </legend>
+              <input class="w3-input w3-border w3-lime" id="cantidad" type="number" />
+            </fieldset>
+          </fieldset>
+        </form>
+		<div class="w3-container w3-white w3-center w3-lime">
+		  <fieldset class="control">
+			<button onclick="itemBefore()" class="w3-btn" >
+			  <i class="fa fa-toggle-left" ></i>
+			</button>
+			<button class="w3-btn w3-green" id="button">
+			  Compra
+			</button>
+			<button onclick="itemNext()" class="w3-btn">
+			  <i class="fa fa-toggle-right" ></i>
+			</button>
+		  </fieldset>
+		</div>
+      </div>
+      <div class="w3-center">
+        <h5 class="w3-center" >Tienes el control</h5>
+        <button onclick="cancelBuy()" type="button" class="w3-button w3-padding-large w3-lime w3-small w3-margin-bottom">Cancelar</button>
+        <button onclick="openModuleRequisition()" type="button" class="w3-button w3-padding-large w3-green w3-small w3-margin-bottom">Siguiente</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="newsletter2" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-white">
+      <i onclick="moduleNone()" class="fa fa-remove w3-right w3-button w3-transparent w3-xlarge w3-lime w3-round-large"></i>
+      <h2 class="w3-wide">Pedido</h2>
+      <fieldset class="w3-round">
+      <p>Asi va tu pedido hasta ahora:</p>
+      <table id="requisition" >
+      <caption></caption>
+      <thead></thead>
+      <tbody></tbody>
+      <tfoot></tfoot>
+      </table>
+      </fieldset>
+      <div class="w3-center">
+        <p>Atención personalizada con un click.</p>
+	    <fieldset class="control">
+          <button onclick="openModuleBuy()" type="button" class="w3-button w3-padding-large w3-lime w3-small w3-margin-bottom" >seguir comprando</button>
+          <button onclick="openModuleFacture()" type="button" class="w3-button w3-padding-large w3-green w3-small w3-margin-bottom" >Facturar</button>
+		</fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="newsletter3" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" >
+    <div class="w3-container w3-white">
+      <i onclick="moduleNone()" class="fa fa-remove w3-right w3-button w3-transparent w3-xlarge w3-lime w3-round-large" ></i>
+      <h2 class="w3-wide">Factura</h2>
+      <p>Asi va tu factura hasta ahora:</p>
+      <table id="facture" >
+        <caption></caption>
+        <thead></thead>
+	    <tbody></tbody>
+	    <tfoot></tfoot>
+	  </table>
+	  <div class="w3-center" >
+	    <p>Atención personalizada con un click.</p>
+	    <button onclick="payBill()" type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom">Pagar</button>
+	  </div>
+    </div>
+  </div>
+</div>
+<a onclick="openModuleBuy()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding">comprar</a> 
+<a onclick="openModuleRequisition()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding">Pedido</a> 
+<a onclick="openModuleFacture()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding">Factura</a> 
+</body>
+<script type="text/javascript" src="./lib/tableconfig/lib.tableconfig.js"></script>
+<script type="text/javascript" src="./lib/tablebody/lib.tablebody.js"></script>
+<script type="text/javascript" src="./model/producto/model.producto.js"></script>
+<script type="text/javascript" src="./data/data.producto.js"></script>
+<script type="text/javascript" src="./controller/producto/controller.producto.js"></script>
+<script type="text/javascript" src="./validation/validation.carrito.js"></script>
+<script type="text/javascript" src="./modules/requisition/modules.requisition.js"></script>
+<script type="text/javascript" src="./modules/requisition/modules.requisition.table.js"></script>
+<script type="text/javascript" src="./modules/facture/modules.facture.table.js"></script>
+<script type="text/javascript" src="./modules/facture/modules.facture.js"></script>
+<script type="text/javascript" src="./service/service.carrito.js"></script>
+<script type="text/javascript" src="./controller/carrito/controller.carrito.js"></script>
+<script type="text/javascript" src="./main/main.js"></script>
+</html>
