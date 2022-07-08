@@ -1,5 +1,14 @@
+legend{
+	padding:5px;
+	border-radius:25px;
+}
+
 div.w3-card-4 form.w3-container fieldset.w3-round img{
 	width:100%;
+}
+
+div.w3-card-4 div.w3-container{
+	margin:0px;
 }
 
 div.w3-modal div.w3-modal-content div.w3-container i{
@@ -7,7 +16,7 @@ div.w3-modal div.w3-modal-content div.w3-container i{
 }
 
 div.w3-container div.w3-center{
-	margin:10px; 
+	margin-bottom:15px; 
 	border:0px;
 }
 
@@ -19,3 +28,20 @@ i{
 fieldset.control{
 	border:0px;
 }
+
+th.th-number{
+	text-align:right;
+}
+
+td.td-number{
+	text-align:right;
+}
+
+
+.moduleNone{
+	display='none';
+}
+
+
+
+

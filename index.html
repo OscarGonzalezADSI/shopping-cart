@@ -12,7 +12,7 @@
 <div id="newsletter" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom" >
     <div class="w3-container w3-white">
-      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xlarge w3-lime w3-round-large" ></i>
+      <i onclick="moduleNone()" class="fa fa-remove w3-right w3-button w3-transparent w3-xlarge w3-lime w3-round-large" ></i>
       <h2 class="w3-wide">¡A Comprar!</h2>
       <p>Elige ser feliz:</p>
       <div class="w3-card-4">
@@ -22,14 +22,14 @@
         <form class="w3-container" >
           <fieldset class="w3-round-large">
             <legend>
-              <label class="w3-text-black" for="producto">
+              <label class="w3-text-black">
                 <b>Datos del producto:</b>
               </label>
             </legend>
             <fieldset class="w3-round">
               <legend>
-                <label class="w3-text-black" for="producto">
-                  <b>imagen:</b>
+                <label class="w3-text-black">
+                  <b>Imagen:</b>
                 </label>
               </legend>
               <img src="https://www.w3schools.com/w3css/img_lights.jpg" class="w3-round" alt="Norway">
@@ -62,13 +62,13 @@
         </form>
 		<div class="w3-container w3-white w3-center w3-lime">
 		  <fieldset class="control">
-			<button class="w3-btn" onclick="document.getElementById('newsletter').style.display='none';       document.getElementById('newsletter2').style.display='block'" >
+			<button onclick="itemBefore()" class="w3-btn" >
 			  <i class="fa fa-toggle-left" ></i>
 			</button>
-			<button class="w3-btn w3-green" id="button" onclick="document.getElementById('newsletter').style.display='none';       document.getElementById('newsletter2').style.display='block'" >
+			<button class="w3-btn w3-green" id="button">
 			  Compra
 			</button>
-			<button class="w3-btn" onclick="document.getElementById('newsletter').style.display='none';       document.getElementById('newsletter2').style.display='block'" >
+			<button onclick="itemNext()" class="w3-btn">
 			  <i class="fa fa-toggle-right" ></i>
 			</button>
 		  </fieldset>
@@ -76,8 +76,8 @@
       </div>
       <div class="w3-center">
         <h5 class="w3-center" >Tienes el control</h5>
-        <button type="button" class="w3-button w3-padding-large w3-lime w3-small w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none';   document.getElementById('newsletter2').style.display='block'">Cancelar</button>
-        <button type="button" class="w3-button w3-padding-large w3-green w3-small w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none';   document.getElementById('newsletter2').style.display='block'">Siguiente</button>
+        <button onclick="cancelBuy()" type="button" class="w3-button w3-padding-large w3-lime w3-small w3-margin-bottom">Cancelar</button>
+        <button onclick="openModuleRequisition()" type="button" class="w3-button w3-padding-large w3-green w3-small w3-margin-bottom">Siguiente</button>
       </div>
     </div>
   </div>
@@ -85,7 +85,7 @@
 <div id="newsletter2" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom">
     <div class="w3-container w3-white">
-      <i onclick="document.getElementById('newsletter2').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xlarge w3-lime w3-round-large"></i>
+      <i onclick="moduleNone()" class="fa fa-remove w3-right w3-button w3-transparent w3-xlarge w3-lime w3-round-large"></i>
       <h2 class="w3-wide">Pedido</h2>
       <fieldset class="w3-round">
       <p>Asi va tu pedido hasta ahora:</p>
@@ -98,7 +98,10 @@
       </fieldset>
       <div class="w3-center">
         <p>Atención personalizada con un click.</p>
-        <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('newsletter2').style.display='none';   document.getElementById('newsletter3').style.display='block'">Facturar</button>
+	    <fieldset class="control">
+          <button onclick="openModuleBuy()" type="button" class="w3-button w3-padding-large w3-lime w3-small w3-margin-bottom" >seguir comprando</button>
+          <button onclick="openModuleFacture()" type="button" class="w3-button w3-padding-large w3-green w3-small w3-margin-bottom" >Facturar</button>
+		</fieldset>
       </div>
     </div>
   </div>
@@ -106,7 +109,7 @@
 <div id="newsletter3" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom" >
     <div class="w3-container w3-white">
-      <i onclick="document.getElementById('newsletter3').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xlarge w3-lime w3-round-large" ></i>
+      <i onclick="moduleNone()" class="fa fa-remove w3-right w3-button w3-transparent w3-xlarge w3-lime w3-round-large" ></i>
       <h2 class="w3-wide">Factura</h2>
       <p>Asi va tu factura hasta ahora:</p>
       <table id="facture" >
@@ -117,14 +120,14 @@
 	  </table>
 	  <div class="w3-center" >
 	    <p>Atención personalizada con un click.</p>
-	    <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('newsletter3').style.display='none'">Pagar</button>
+	    <button onclick="payBill()" type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom">Pagar</button>
 	  </div>
     </div>
   </div>
 </div>
-<a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">comprar</a> 
-<a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter2').style.display='block'">Pedido</a> 
-<a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter3').style.display='block'">Factura</a> 
+<a onclick="openModuleBuy()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding">comprar</a> 
+<a onclick="openModuleRequisition()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding">Pedido</a> 
+<a onclick="openModuleFacture()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding">Factura</a> 
 </body>
 <script type="text/javascript" src="./lib/tableconfig/lib.tableconfig.js"></script>
 <script type="text/javascript" src="./lib/tablebody/lib.tablebody.js"></script>
